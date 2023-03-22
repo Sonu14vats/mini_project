@@ -10,14 +10,9 @@ export class AppComponent {
   title = 'angular-google';
   user:any;
   loggedIn:any;
-  constructor(private authService: SocialAuthService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.authService.authState.subscribe((user) => {
-      this.user = user;
-      this.loggedIn = (user != null);
-      console.log(this.user)
-    });
   }
 
 }
